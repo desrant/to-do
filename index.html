@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/acdbb1f93d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>To-Dos</title>
+</head>
+<body>
+    <div class="container">
+      <header class="text-center text-light my-4">
+        <h1 class="mb-4">To-do List</h1>
+        <form class="search">
+          <input type="text" class="form-control m-auto" name="search" placeholder="search to dos">
+        </form>
+      </header>
+      <ul class="list-group mx-auto todos text-light">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>Make India Great Again</span>
+          <i class="fas fa-trash delete"></i>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>Code</span>
+          <i class="fas fa-trash delete"></i>
+      </ul>
+      <form class="add text-center my-4">
+        <label class="text-light">Add a new to do..</label>
+        <input type="text" class="form-control m-auto" name="add">
+      </form>
+    </div>
+  <script src="app.js"></script>
+</body>
+</html>

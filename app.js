@@ -32,22 +32,16 @@ list.addEventListener('click', e => {
 // to filter out terms according to the search
 const filterTodos = (term) => {
     Array.from(list.children)
-    .filter((todo) => {
-      return !todo.textContent.includes(term);
-    })
-    .forEach(todo => {
-      todo.classList.add('filtered');
-    });
-    Array.from(list.children)
-    .filter((todo) => {
-      return todo.textContent.includes(term);
-    })
-    .forEach(todo => {
-      todo.classList.remove('filtered');
-    });
+    .filter(todo => !todo.textContent.toLowerCase().includes(term.toLowerCase()))
+    .forEach(todo => todo.classList.add('filtered'));
+
+     Array.from(list.children)
+    .filter(todo => todo.textContent.toLowerCase().includes(term.toLowerCase()))
+    .forEach(todo => todo.classList.remove('filtered'));
 };
 
 search.addEventListener('keyup', () => {
     const term = search.value.trim();
     filterTodos(term);
 });
+
